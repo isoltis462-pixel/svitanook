@@ -1,16 +1,17 @@
 :root {
-  --primary: #FFB703;
-  --primary-hover: #FB8500;
-  --secondary: #023047;
-  --bg-color: #FAFAFB;
+  --primary: #FDE291;        /* М'який сонячний жовтий з логотипа */
+  --primary-hover: #F4C430;
+  --secondary: #1D3557;      /* Глибокий темно-синій контур */
+  --accent: #A8DADC;         /* Пастельно-блакитний відтінок з лого */
+  --bg-color: #FDFBF7;       /* Теплий кремовий фон */
   --surface-color: #FFFFFF;
-  --surface-alt: #F3F4F6;
-  --text-main: #111827;
-  --text-muted: #6B7280;
-  --border-color: #E5E7EB;
-  --radius-md: 10px;
+  --surface-alt: #F7F4EE;
+  --text-main: #1D3557;
+  --text-muted: #6C757D;
+  --border-color: #E2DBD0;
+  --radius-md: 12px;
   --radius-full: 9999px;
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(29, 53, 87, 0.08);
   --transition: all 0.25s ease-in-out;
 }
 
@@ -21,9 +22,12 @@ a { text-decoration: none; color: inherit; }
 
 .header { position: sticky; top: 0; z-index: 100; background: var(--surface-color); border-bottom: 1px solid var(--border-color); padding: 12px 0; }
 .header-container { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.logo { font-size: 1.4rem; font-weight: 800; color: var(--secondary); letter-spacing: 1px; }
+
+.logo { display: flex; align-items: center; gap: 12px; font-size: 1.3rem; font-weight: 800; color: var(--secondary); letter-spacing: 0.5px; }
+.logo img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary); }
+
 .nav-menu { display: flex; gap: 20px; }
-.nav-link { font-weight: 500; color: var(--text-main); transition: var(--transition); }
+.nav-link { font-weight: 600; color: var(--text-main); transition: var(--transition); }
 .nav-link:hover, .nav-link.active { color: var(--primary-hover); }
 
 .search-bar { flex: 1; max-width: 350px; position: relative; }
@@ -31,14 +35,14 @@ a { text-decoration: none; color: inherit; }
 .search-bar i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
 
 .header-actions { display: flex; gap: 12px; }
-.action-btn { position: relative; width: 40px; height: 40px; border-radius: 50%; background: var(--surface-alt); display: flex; align-items: center; justify-content: center; }
-.action-badge { position: absolute; top: -4px; right: -4px; background: #EF4444; color: white; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.action-btn { position: relative; width: 40px; height: 40px; border-radius: 50%; background: var(--surface-alt); display: flex; align-items: center; justify-content: center; color: var(--secondary); }
+.action-badge { position: absolute; top: -4px; right: -4px; background: #E63946; color: white; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
-.hero { background: linear-gradient(135deg, var(--secondary), #219EBC); color: white; padding: 60px 0; text-align: center; }
+.hero { background: linear-gradient(135deg, var(--secondary), #457B9D); color: white; padding: 60px 0; text-align: center; }
 .hero h1 { font-size: 2.2rem; margin-bottom: 12px; }
 
 .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
-.product-card { background: var(--surface-color); border-radius: var(--radius-md); border: 1px solid var(--border-color); overflow: hidden; display: flex; flex-direction: column; }
+.product-card { background: var(--surface-color); border-radius: var(--radius-md); border: 1px solid var(--border-color); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-md); }
 .product-thumb { height: 200px; background: var(--surface-alt); }
 .product-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .product-content { padding: 16px; display: flex; flex-direction: column; flex: 1; }
@@ -47,7 +51,7 @@ a { text-decoration: none; color: inherit; }
 .current-price { font-size: 1.1rem; font-weight: 700; color: var(--secondary); }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; border-radius: var(--radius-md); font-weight: 600; cursor: pointer; border: none; }
-.btn-primary { background: var(--primary); color: #111827; }
+.btn-primary { background: var(--primary); color: var(--secondary); border: 1px solid #E9D280; }
 .btn-primary:hover { background: var(--primary-hover); }
 
 .footer { background: var(--secondary); color: white; text-align: center; padding: 24px 0; margin-top: auto; font-size: 0.9rem; }
