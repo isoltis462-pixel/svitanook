@@ -1,8 +1,8 @@
 const products = [
-  { id: 1, name: "Анатомічна подушка Світанок", price: 1450, image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=400&q=80" },
-  { id: 2, name: "Органічна постель 'Ранкова роса'", price: 2890, image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=400&q=80" },
-  { id: 3, name: "Аромадифузор 'Сонячний цитрус'", price: 790, image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=400&q=80" },
-  { id: 4, name: "Ранковий заварник для кави", price: 1120, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80" }
+  { id: 1, name: "Дитячий кокон-позиціонер 'Світанок'", price: 1450, image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=400&q=80" },
+  { id: 2, name: "Органічна дитяча постель", price: 2890, image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=400&q=80" },
+  { id: 3, name: "Нічник дитячий 'Сонечко'", price: 790, image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=400&q=80" },
+  { id: 4, name: "Дитячий плед ручної роботи", price: 1120, image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80" }
 ];
 
 let cart = JSON.parse(localStorage.getItem('svitanok_cart')) || [];
@@ -64,7 +64,7 @@ function renderCartPage() {
               <h4>${product.name}</h4>
               <p style="color: var(--text-muted);">${item.quantity} шт. × ${product.price} грн</p>
             </div>
-            <button class="btn" style="background: #EF4444; color: white;" onclick="removeFromCart(${product.id})">Видалити</button>
+            <button class="btn" style="background: #E63946; color: white;" onclick="removeFromCart(${product.id})">Видалити</button>
           </div>
         `;
       }).join('')}
