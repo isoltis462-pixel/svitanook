@@ -1,1 +1,64 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий кабінет — Світанок</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pageBg: '#EFEAF2',
+                        brandDark: '#23204A',
+                        accent: '#FF4D6D',
+                        accentDark: '#DE2C4F'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>body { font-family: 'Manrope', sans-serif; background-color: #EFEAF2; color: #201C3B; }</style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+    
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#DED8E8]">
+        <div class="max-w-[1360px] mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold text-brandDark">Світанок</a>
+            <a href="index.html" class="text-sm font-semibold text-accent hover:underline">На головну</a>
+        </div>
+    </header>
 
+    <main class="max-w-[1000px] w-full mx-auto px-4 py-10 space-y-8">
+        
+        <!-- Картка користувача -->
+        <div class="bg-white rounded-[32px] border border-[#DED8E8] p-8 shadow-sm flex items-center gap-6">
+            <div class="w-24 h-24 rounded-full bg-brandDark text-white flex items-center justify-center text-4xl font-extrabold shadow-md">Д</div>
+            <div class="space-y-1">
+                <h1 class="text-3xl font-extrabold text-brandDark">Денис</h1>
+                <p class="text-sm text-[#88849F]">Клієнт маркетплейсу • Активний акаунт</p>
+            </div>
+        </div>
+
+        <!-- Історія замовлень -->
+        <div class="bg-white rounded-[32px] border border-[#DED8E8] p-8 space-y-6 shadow-sm">
+            <h2 class="text-xl font-extrabold text-brandDark">Історія замовлень</h2>
+            
+            <div class="p-5 bg-[#F5F2F6] rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border border-[#E8E2ED]">
+                <div class="space-y-1">
+                    <span class="font-bold text-brandDark text-base">Замовлення #104</span>
+                    <p class="text-xs text-[#88849F]">iPhone 15 128GB — 29 999 ₴</p>
+                </div>
+                <span class="bg-amber-100 text-amber-800 px-4 py-1.5 rounded-full text-xs font-bold">В обробці</span>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t py-8 text-center text-xs text-[#88849F]">© 2026 Світанок</footer>
+    <script src="app.js"></script>
+</body>
+</html>
