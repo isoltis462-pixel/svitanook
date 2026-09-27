@@ -1,1 +1,94 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 15 128GB — Світанок</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pageBg: '#EFEAF2',
+                        brandDark: '#23204A',
+                        accent: '#FF4D6D',
+                        accentDark: '#DE2C4F'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>body { font-family: 'Manrope', sans-serif; background-color: #EFEAF2; color: #201C3B; }</style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+    
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#DED8E8]">
+        <div class="max-w-[1360px] mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold text-brandDark">Світанок</a>
+            <a href="catalog.html" class="text-sm font-semibold text-accent hover:underline flex items-center gap-2">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Назад до каталогу
+            </a>
+        </div>
+    </header>
 
+    <main class="max-w-[1200px] w-full mx-auto px-4 py-10">
+        <div class="bg-white rounded-[32px] border border-[#DED8E8] p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-10 shadow-sm">
+            
+            <!-- Галерея фото -->
+            <div class="space-y-4">
+                <div class="rounded-3xl overflow-hidden border border-[#E8E2ED] bg-[#F5F2F6]">
+                    <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&auto=format&fit=crop&q=80" class="w-full h-[400px] object-cover">
+                </div>
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="rounded-2xl overflow-hidden border border-[#E8E2ED] h-24 bg-[#F5F2F6]">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=300&auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Інформація про товар -->
+            <div class="space-y-6 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-emerald-100 text-emerald-700 px-3.5 py-1 rounded-full text-xs font-bold">В наявності</span>
+                        <span class="text-xs text-[#88849F]">Артикул: #SV-8942</span>
+                    </div>
+
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-brandDark">Смартфон iPhone 15 128GB Black</h1>
+                    <div class="text-3xl font-extrabold text-accent">29 999 ₴</div>
+
+                    <div class="p-4 rounded-2xl bg-[#F5F2F6] space-y-2 border border-[#E8E2ED]">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brandDark text-white flex items-center justify-center font-bold">Т</div>
+                            <div>
+                                <h3 class="font-bold text-sm text-brandDark">ТехноСвіт</h3>
+                                <p class="text-xs text-[#88849F]">Перевірений продавець • Рейтинг 4.9</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-[#67628A] leading-relaxed">
+                        Оригінальний смартфон з офіційною гарантією від виробника. Потужний процесор A16 Bionic, інноваційна система камери на 48 МП та новий зручний роз'єм USB-C.
+                    </p>
+                </div>
+
+                <div class="space-y-3 pt-6 border-t border-[#E8E2ED]">
+                    <button onclick="alert('Товар успішно додано до кошика!')" class="w-full bg-accent hover:bg-accentDark text-white py-4 rounded-full font-bold shadow-lg transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-cart" class="w-5 h-5"></i> Купити зараз
+                    </button>
+                    <a href="chat.html" class="w-full bg-brandDark hover:bg-opacity-90 text-white py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="message-square" class="w-5 h-5"></i> Написати продавцю
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-white border-t py-8 text-center text-xs text-[#88849F]">© 2026 Світанок</footer>
+    <script src="app.js"></script>
+</body>
+</html>
