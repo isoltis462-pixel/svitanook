@@ -1,1 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
 
+:root {
+  /* Кольори сторінки */
+  --page-bg: #EFEAF2;
+  --page-surface: #FFFFFF;
+  --page-text: #201C3B;
+  --page-soft: #67628A;
+  --page-line: #DED8E8;
+
+  /* Кольори магазину */
+  --shop-bg: #F5F2F6;
+  --shop-surface: #FFFFFF;
+  --shop-ink: #23204A;
+  --shop-soft: #88849F;
+  --shop-line: #E8E2ED;
+
+  /* Акценти */
+  --accent: #FF4D6D;
+  --accent-dark: #DE2C4F;
+  --gold: #FFB648;
+  --success: #2FA876;
+  --error: #E15554;
+
+  /* Радіуси */
+  --radius-large: 16px;
+  --radius-small: 9px;
+  --radius-pill: 999px;
+
+  /* Градієнт Світанку */
+  --sunrise-gradient: linear-gradient(120deg, #23204A 0%, #DE2C4F 55%, #FFB648 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--page-bg);
+  color: var(--page-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
