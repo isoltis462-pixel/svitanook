@@ -1,1 +1,71 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Повідомлення — Світанок</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pageBg: '#EFEAF2',
+                        brandDark: '#23204A',
+                        accent: '#FF4D6D',
+                        accentDark: '#DE2C4F'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>body { font-family: 'Manrope', sans-serif; background-color: #EFEAF2; color: #201C3B; }</style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+    
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#DED8E8]">
+        <div class="max-w-[1360px] mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold text-brandDark">Світанок — Чат</a>
+            <a href="index.html" class="text-sm font-semibold text-accent hover:underline">На головну</a>
+        </div>
+    </header>
 
+    <main class="max-w-[1000px] w-full mx-auto px-4 py-8 flex-1 flex flex-col">
+        <div class="bg-white flex-1 rounded-3xl border border-[#DED8E8] p-6 flex flex-col justify-between shadow-sm h-[600px]">
+            
+            <!-- Шапка чату -->
+            <div class="flex items-center gap-3 pb-4 border-b border-[#E8E2ED]">
+                <div class="w-10 h-10 rounded-full bg-brandDark text-white flex items-center justify-center font-bold">Т</div>
+                <div>
+                    <h3 class="font-bold text-brandDark text-sm">ТехноСвіт (Продавець)</h3>
+                    <p class="text-[10px] text-emerald-600 font-semibold">В мережі</p>
+                </div>
+            </div>
+
+            <!-- Історія повідомлень -->
+            <div class="space-y-4 overflow-y-auto py-4 flex-1">
+                <div class="bg-[#F5F2F6] p-4 rounded-2xl max-w-sm text-sm text-brandDark">
+                    Вітаю! Мене цікавить iPhone 15, чи є в чорному кольорі в наявності?
+                </div>
+                <div class="bg-brandDark text-white p-4 rounded-2xl max-w-sm text-sm ml-auto shadow-md">
+                    Доброго дня! Так, чорний колір є в наявності, готовий відправити поштою сьогодні.
+                </div>
+            </div>
+
+            <!-- Поле введення -->
+            <div class="pt-4 border-t border-[#E8E2ED] flex gap-3">
+                <input type="text" placeholder="Введіть ваше повідомлення..." class="flex-1 bg-[#F5F2F6] border border-[#E8E2ED] rounded-2xl px-5 py-3 text-sm focus:outline-none focus:border-accent">
+                <button onclick="alert('Повідомлення надіслано!')" class="bg-accent hover:bg-accentDark text-white px-6 rounded-2xl font-bold transition-all flex items-center justify-center">
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-white border-t py-8 text-center text-xs text-[#88849F]">© 2026 Світанок</footer>
+    <script src="app.js"></script>
+</body>
+</html>
