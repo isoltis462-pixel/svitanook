@@ -1,18 +1,151 @@
 <!doctype html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Світанок — Більше, ніж просто покупки</title>
-    <!-- Шрифт Manrope -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Світанок — Сучасний маркетплейс України</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pageBg: '#EFEAF2',
+                        brandDark: '#23204A',
+                        accent: '#FF4D6D',
+                        accentDark: '#DE2C4F',
+                        gold: '#FFB648'
+                    }
+                }
+            }
+        }
+    </script>
     <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body class="bg-[#EFEAF2] text-[#201C3B] font-['Manrope',sans-serif] antialiased selection:bg-[#FF4D6D] selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <style>
+        body { font-family: 'Manrope', sans-serif; background-color: #EFEAF2; color: #201C3B; }
+        .sunrise-gradient { background: linear-gradient(120deg, #23204A 0%, #DE2C4F 55%, #FFB648 100%); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#DED8E8]">
+        <div class="max-w-[1360px] mx-auto px-4 h-20 flex items-center justify-between gap-4">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full sunrise-gradient flex items-center justify-center text-white shadow-md">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-extrabold tracking-tight text-brandDark">Світанок</span>
+                    <span class="block text-[10px] text-[#88849F] font-semibold uppercase tracking-wider">Маркетплейс</span>
+                </div>
+            </a>
+
+            <!-- Пошук у шапці -->
+            <div class="hidden lg:flex items-center flex-1 max-w-md mx-8">
+                <div class="relative w-full">
+                    <input type="text" placeholder="Знайти товар серед тисяч оголошень..." class="w-full bg-[#F5F2F6] border border-[#E8E2ED] rounded-full pl-11 pr-4 py-2.5 text-sm focus:outline-none focus:border-accent transition-colors">
+                    <i data-lucide="search" class="w-4 h-4 text-[#88849F] absolute left-4 top-3.5"></i>
+                </div>
+            </div>
+
+            <!-- Навігація -->
+            <nav class="hidden md:flex items-center gap-6 font-semibold text-sm text-[#67628A]">
+                <a href="index.html" class="text-accent">Головна</a>
+                <a href="catalog.html" class="hover:text-brandDark transition-colors">Каталог</a>
+                <a href="chat.html" class="hover:text-brandDark transition-colors">Повідомлення</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="profile.html" class="p-2.5 rounded-full bg-[#F5F2F6] hover:bg-[#E8E2ED] text-brandDark transition-colors" title="Профіль">
+                    <i data-lucide="user" class="w-5 h-5"></i>
+                </a>
+                <a href="cart.html" class="flex items-center gap-2 bg-brandDark text-white px-4.5 py-2.5 rounded-full font-semibold text-sm hover:bg-accentDark transition-colors shadow-sm">
+                    <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                    <span>Кошик</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="flex-1 max-w-[1360px] w-full mx-auto px-4 py-8 space-y-12">
+        
+        <!-- Герой-секція -->
+        <div class="relative rounded-[32px] sunrise-gradient p-8 md:p-14 text-white shadow-xl overflow-hidden flex flex-col md:flex-row items-center justify-between">
+            <div class="relative z-10 max-w-xl space-y-6">
+                <span class="bg-white/20 backdrop-blur-sm px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">✦ Новий сезон покупок</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Знайди все необхідне для себе та дому</h1>
+                <p class="text-white/85 text-base md:text-lg">Тисячі унікальних товарів від надійних продавців зі швидкою доставкою по всій Україні.</p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="catalog.html" class="bg-accent hover:bg-accentDark text-white px-8 py-4 rounded-full font-extrabold shadow-lg transition-all transform hover:-translate-y-0.5">Перейти до каталогу</a>
+                    <a href="chat.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/30 px-7 py-4 rounded-full font-bold transition-all">Зв'язатися з нами</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Категорії -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between">
+                <h2 class="text-2xl font-extrabold text-brandDark">Популярні категорії</h2>
+                <a href="catalog.html" class="text-accent font-bold text-sm hover:underline">Дивитися всі →</a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                <a href="catalog.html" class="bg-white p-6 rounded-3xl border border-[#DED8E8] shadow-sm hover:shadow-md hover:border-accent transition-all text-center space-y-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#F5F2F6] flex items-center justify-center mx-auto group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="smartphone" class="w-6 h-6 text-accent group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-brandDark text-sm">Електроніка</h3>
+                </a>
+                <a href="catalog.html" class="bg-white p-6 rounded-3xl border border-[#DED8E8] shadow-sm hover:shadow-md hover:border-accent transition-all text-center space-y-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#F5F2F6] flex items-center justify-center mx-auto group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="shirt" class="w-6 h-6 text-accent group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-brandDark text-sm">Одяг та стиль</h3>
+                </a>
+                <a href="catalog.html" class="bg-white p-6 rounded-3xl border border-[#DED8E8] shadow-sm hover:shadow-md hover:border-accent transition-all text-center space-y-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#F5F2F6] flex items-center justify-center mx-auto group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="home" class="w-6 h-6 text-accent group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-brandDark text-sm">Дім і затишок</h3>
+                </a>
+                <a href="catalog.html" class="bg-white p-6 rounded-3xl border border-[#DED8E8] shadow-sm hover:shadow-md hover:border-accent transition-all text-center space-y-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#F5F2F6] flex items-center justify-center mx-auto group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="dumbbell" class="w-6 h-6 text-accent group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-brandDark text-sm">Спорт і відпочинок</h3>
+                </a>
+                <a href="catalog.html" class="bg-white p-6 rounded-3xl border border-[#DED8E8] shadow-sm hover:shadow-md hover:border-accent transition-all text-center space-y-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#F5F2F6] flex items-center justify-center mx-auto group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="car" class="w-6 h-6 text-accent group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-brandDark text-sm">Автотовари</h3>
+                </a>
+                <a href="catalog.html" class="bg-white p-6 rounded-3xl border border-[#DED8E8] shadow-sm hover:shadow-md hover:border-accent transition-all text-center space-y-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#F5F2F6] flex items-center justify-center mx-auto group-hover:bg-accent group-hover:text-white transition-colors">
+                        <i data-lucide="gift" class="w-6 h-6 text-accent group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-brandDark text-sm">Аксесуари</h3>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-[#DED8E8] mt-20 py-12">
+        <div class="max-w-[1360px] mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full sunrise-gradient flex items-center justify-center text-white">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <span class="text-xl font-extrabold text-brandDark">Світанок</span>
+            </div>
+            <p class="text-xs text-[#88849F]">© 2026 Маркетплейс «Світанок». Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
 </html>
