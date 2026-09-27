@@ -1,1 +1,95 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик і замовлення — Світанок</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pageBg: '#EFEAF2',
+                        brandDark: '#23204A',
+                        accent: '#FF4D6D',
+                        accentDark: '#DE2C4F'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>body { font-family: 'Manrope', sans-serif; background-color: #EFEAF2; color: #201C3B; }</style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+    
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#DED8E8]">
+        <div class="max-w-[1360px] mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold text-brandDark">Світанок</a>
+            <a href="catalog.html" class="text-sm font-semibold text-accent hover:underline">← Продовжити покупки</a>
+        </div>
+    </header>
 
+    <main class="max-w-[1200px] w-full mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Список товарів -->
+        <div class="lg:col-span-2 space-y-6">
+            <h1 class="text-3xl font-extrabold text-brandDark">Кошик</h1>
+            
+            <div class="bg-white rounded-3xl border border-[#DED8E8] p-6 space-y-4 shadow-sm">
+                <div class="flex items-center justify-between gap-4 pb-4 border-b border-[#E8E2ED]">
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=200&auto=format&fit=crop&q=80" class="w-20 h-20 object-cover rounded-2xl bg-[#F5F2F6]">
+                        <div>
+                            <h3 class="font-bold text-brandDark text-base">Смартфон iPhone 15 128GB</h3>
+                            <p class="text-xs text-[#88849F] mt-1">Продавець: ТехноСвіт</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-extrabold text-lg text-brandDark">29 999 ₴</div>
+                        <button class="text-xs text-accent font-semibold mt-1 hover:underline">Видалити</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма оформлення -->
+        <div class="space-y-6">
+            <h2 class="text-2xl font-extrabold text-brandDark">Оформлення</h2>
+            <div class="bg-white rounded-3xl border border-[#DED8E8] p-6 space-y-4 shadow-sm">
+                <div class="space-y-1">
+                    <label class="text-xs font-bold text-[#67628A]">Ім'я та прізвище</label>
+                    <input type="text" placeholder="Денис ..." class="w-full bg-[#F5F2F6] border border-[#E8E2ED] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs font-bold text-[#67628A]">Місто та відділення пошти</label>
+                    <input type="text" placeholder="м. Львів, Нова Пошта №1" class="w-full bg-[#F5F2F6] border border-[#E8E2ED] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs font-bold text-[#67628A]">Номер телефону</label>
+                    <input type="text" placeholder="+380 (__)..." class="w-full bg-[#F5F2F6] border border-[#E8E2ED] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent">
+                </div>
+
+                <div class="border-t border-[#E8E2ED] pt-4 space-y-2">
+                    <div class="flex justify-between text-sm text-[#67628A]">
+                        <span>Товари (1):</span>
+                        <span class="font-bold text-brandDark">29 999 ₴</span>
+                    </div>
+                    <div class="flex justify-between text-lg font-extrabold text-brandDark pt-2">
+                        <span>До сплати:</span>
+                        <span class="text-accent">29 999 ₴</span>
+                    </div>
+                </div>
+
+                <button onclick="alert('Замовлення успішно оформлено! Дякуємо.')" class="w-full bg-accent hover:bg-accentDark text-white py-4 rounded-full font-bold shadow-lg transition-all">Підтвердити замовлення</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t py-8 text-center text-xs text-[#88849F]">© 2026 Світанок</footer>
+    <script src="app.js"></script>
+</body>
+</html>
