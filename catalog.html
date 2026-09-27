@@ -1,1 +1,130 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товарів — Світанок</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pageBg: '#EFEAF2',
+                        brandDark: '#23204A',
+                        accent: '#FF4D6D',
+                        accentDark: '#DE2C4F'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>body { font-family: 'Manrope', sans-serif; background-color: #EFEAF2; color: #201C3B; }</style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+    
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#DED8E8]">
+        <div class="max-w-[1360px] mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold text-brandDark">Світанок</a>
+            <div class="flex items-center gap-4">
+                <a href="cart.html" class="flex items-center gap-2 bg-brandDark text-white px-4 py-2 rounded-full font-semibold text-sm">
+                    <i data-lucide="shopping-cart" class="w-4 h-4"></i> Кошик
+                </a>
+                <a href="index.html" class="text-sm font-semibold text-accent hover:underline">← На головну</a>
+            </div>
+        </div>
+    </header>
 
+    <main class="max-w-[1360px] w-full mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+        
+        <!-- Фільтри зліва -->
+        <aside class="bg-white rounded-3xl border border-[#DED8E8] p-6 h-fit space-y-6 shadow-sm">
+            <h2 class="font-extrabold text-lg text-brandDark flex items-center gap-2">
+                <i data-lucide="filter" class="w-5 h-5 text-accent"></i> Фільтри
+            </h2>
+            <div class="space-y-4 text-sm">
+                <div class="space-y-2">
+                    <label class="font-bold text-[#67628A]">Ціна (₴)</label>
+                    <div class="flex gap-2">
+                        <input type="number" placeholder="Від" class="w-full bg-[#F5F2F6] border border-[#E8E2ED] rounded-xl px-3 py-2">
+                        <input type="number" placeholder="До" class="w-full bg-[#F5F2F6] border border-[#E8E2ED] rounded-xl px-3 py-2">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="font-bold text-[#67628A]">Стан товару</label>
+                    <div class="space-y-1.5">
+                        <label class="flex items-center gap-2"><input type="checkbox" class="accent-accent"> Новий</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" class="accent-accent"> Б/У в ідеалі</label>
+                    </div>
+                </div>
+                <button class="w-full bg-brandDark text-white py-3 rounded-full font-bold text-sm hover:bg-accent transition-colors">Застосувати</button>
+            </div>
+        </aside>
+
+        <!-- Сітка товарів -->
+        <div class="lg:col-span-3 space-y-6">
+            <div class="flex items-center justify-between">
+                <h1 class="text-3xl font-extrabold text-brandDark">Каталог товарів</h1>
+                <span class="text-sm text-[#88849F]">Знайдено товари</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                
+                <!-- Товар 1 -->
+                <div class="bg-white rounded-3xl border border-[#DED8E8] p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&auto=format&fit=crop&q=80" class="w-full h-52 object-cover rounded-2xl">
+                            <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">В наявності</span>
+                        </div>
+                        <h3 class="font-bold text-brandDark text-base line-clamp-1">Смартфон iPhone 15 128GB</h3>
+                        <p class="text-xs text-[#88849F] mt-1">Продавець: ТехноСвіт</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-[#E8E2ED]">
+                        <span class="font-extrabold text-lg text-brandDark">29 999 ₴</span>
+                        <a href="product.html" class="bg-accent hover:bg-accentDark text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors">Детальніше</a>
+                    </div>
+                </div>
+
+                <!-- Товар 2 -->
+                <div class="bg-white rounded-3xl border border-[#DED8E8] p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=500&auto=format&fit=crop&q=80" class="w-full h-52 object-cover rounded-2xl">
+                            <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">В наявності</span>
+                        </div>
+                        <h3 class="font-bold text-brandDark text-base line-clamp-1">Бездротові навушники AirPods Pro</h3>
+                        <p class="text-xs text-[#88849F] mt-1">Продавець: Apple Store UA</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-[#E8E2ED]">
+                        <span class="font-extrabold text-lg text-brandDark">8 999 ₴</span>
+                        <a href="product.html" class="bg-accent hover:bg-accentDark text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors">Детальніше</a>
+                    </div>
+                </div>
+
+                <!-- Товар 3 -->
+                <div class="bg-white rounded-3xl border border-[#DED8E8] p-4 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <div class="relative mb-4">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=80" class="w-full h-52 object-cover rounded-2xl">
+                            <span class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">Під замовлення</span>
+                        </div>
+                        <h3 class="font-bold text-brandDark text-base line-clamp-1">Студійні навушники JBL</h3>
+                        <p class="text-xs text-[#88849F] mt-1">Продавець: МузДім</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-[#E8E2ED]">
+                        <span class="font-extrabold text-lg text-brandDark">4 499 ₴</span>
+                        <a href="product.html" class="bg-accent hover:bg-accentDark text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors">Детальніше</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t py-6 text-center text-xs text-[#88849F]">© 2026 Світанок</footer>
+    <script src="app.js"></script>
+</body>
+</html>
